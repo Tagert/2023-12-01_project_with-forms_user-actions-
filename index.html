@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trying forms and user-actions</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="navbar"></header>
+
+ <!-- Navbar Section -->
+
+    <main class="navbar">
+      <div class="nav-link home"><a href="#home">Home</a></div>
+      <div class="nav-link about"><a href="#about">About</a></div>
+      
+      <div class="sec-center">
+        <input class="dropdown" type="checkbox" id="dropdown" name="dropdown" />
+        <label class="for-dropdown" for="dropdown">Contact Us</label>
+        <div class="section-dropdown">
+          <div class="contact-form">
+            <h1>Contact Us!</h1>
+      
+            <form>
+              <label for="name">Name:</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Tommy"
+                minlength="3"
+                maxlength="20"
+                required
+              />
+      
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="tommy@email.com"
+                required
+              />
+      
+              <label for="tel">Mobile Number:</label>
+              <input type="tel" name="tel" id="tel" placeholder="+370 614 74561" minlength="8" maxlength="8" pattern="[370]{3} [0-9]{3} [0-9]{5}" />
+      
+              <textarea placeholder="Your message goes here..."></textarea>
+      
+              <input type="submit" value="Send!" />
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="nav-link register-form"><a href="#register">Register Form</a></div>
+  
+
+      
+    </main>
+    <div class="body-background"></div>
+    </div>
+  </body>
+</html>
