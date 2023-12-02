@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="navbar"></header>
-
+    
  <!-- Navbar Section -->
 
     <main class="navbar">
@@ -53,11 +52,139 @@
           </div>
         </div>
       </div>
-      <div class="nav-link register-form"><a href="#register">Register Form</a></div>
+      <div class="reg-sec-center">
+        <input class="reg-dropdown" type="checkbox" id="reg-dropdown" name="reg-dropdown" />
+        <label class="for-dropdown" for="reg-dropdown">Register Form</label>
+        <div class="reg-section-dropdown">
+          <div class="register-form">
+            <h1>Register Form</h1>
+            <p>
+              All fields are <span class="required">required</span> unless
+              marked as "optional"
+            </p>
   
-
+            <form method="post">
+              <div class="read-only">
+                <label for="read-only"
+                  >Your unique ID that you can't change</label
+                >
+                <input
+                  id="read-only"
+                  type="text"
+                  name="read-only"
+                  value="YBX0123"
+                  readonly
+                />
+              </div>
+              <div class="email">
+                <label for="email">Email:</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="tommy@email.com"
+                  required
+                />
+              </div>
+              <div class="password">
+                <label for="password">Password:</label><br />
+                <input
+                  id="password"
+                  type="password"
+                  name="password"
+                  required
+                  required
+                />
+              </div>
+              <div class="age">
+                <label for="age">Age:</label><br />
+                <input
+                  id="age"
+                  type="number"
+                  name="age"
+                  min="18"
+                  max="65"
+                  placeholder="18"
+                  required
+                />
+              </div>
+  
+              <div class="text-area">
+                <textarea placeholder="Your message goes here..."></textarea>
+              </div>
+  
+              <input type="submit" value="Register" />
+            </form>
+          </div>
+        </div>
+      </div>
       
     </main>
+
+    
+    <!-- <section>
+      <div class="reg-section-dropdown">
+        <div class="contact-form">
+          <h1>Register Form</h1>
+          <p>
+            All fields are <span class="required">required</span> unless
+            marked as "optional"
+          </p>
+
+          <form method="post">
+            <div class="read-only">
+              <label for="read-only"
+                >Your unique ID that you can't change</label
+              >
+              <input
+                id="read-only"
+                type="text"
+                name="read-only"
+                value="YBX0123"
+                readonly
+              />
+            </div>
+            <div class="email">
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="tommy@email.com"
+                required
+              />
+            </div>
+            <div class="password">
+              <label for="password">Password:</label><br />
+              <input
+                id="password"
+                type="password"
+                name="password"
+                required
+                required
+              />
+            </div>
+            <div class="age">
+              <label for="age">Age:</label><br />
+              <input
+                id="age"
+                type="number"
+                name="age"
+                min="18"
+                max="65"
+                required
+              />
+            </div>
+
+            <div class="text-area">
+              <textarea placeholder="Your message goes here..."></textarea>
+            </div>
+
+            <input type="submit" value="Register" />
+          </form>
+        </div>
+      </div>
+    </section> -->
     <div class="body-background"></div>
     </div>
   </body>

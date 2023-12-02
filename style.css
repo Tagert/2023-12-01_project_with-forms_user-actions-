@@ -10,7 +10,6 @@
 
 body {
   background-color: #eef5ff;
-  z-index: 0;
   font-family: "Playfair Display", serif;
 }
 
@@ -18,26 +17,7 @@ main {
   position: absolute;
   width: 100%;
   height: 90%;
-  top: 50px;
-}
-
-h1 {
-  text-align: center;
-  color: #333;
-  padding: 10px 0px 30px 0px;
-  font-size: 25px;
-}
-
-input,
-textarea {
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 5px 5px 5px 0;
-  background: none;
-  border: none;
-  border-bottom: 1px solid black;
-  margin-bottom: 20px;
+  top: 10px;
 }
 
 .body-background {
@@ -51,23 +31,23 @@ textarea {
   z-index: -1;
 }
 
+/* Navbar and buttons style */
+
 .navbar {
   position: absolute;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: center;
   background-color: #eef5ff;
   height: 40px;
-  left: 20%;
-  width: 80%;
-  padding-right: 4%;
+  width: 100%;
   column-gap: 5%;
-  z-index: 0;
   border-radius: 20px;
 }
 
 .nav-link,
-.sec-center {
+.sec-center,
+.reg-sec-center {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -103,14 +83,35 @@ textarea {
   cursor: pointer;
 }
 
+/* Contact Us _ internal data box style */
+
 .contact-form {
   position: relative;
   background-color: #eef5ff;
   height: 450px;
-  max-width: 350px;
+  max-width: 330px;
   padding: 25px;
   border: 2px solid #9eb8d9;
   border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  padding: 10px 0px 30px 0px;
+  font-size: 25px;
+}
+
+input,
+textarea {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px 5px 5px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid black;
+  margin-bottom: 20px;
 }
 
 input:focus,
@@ -129,7 +130,7 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-/* Dropdown box style */
+/* Contact Us _ dropdown box style */
 
 .dropdown {
   width: 19%;
@@ -150,10 +151,9 @@ input[type="submit"] {
   position: absolute;
   padding: 5px;
   background-color: #111;
-  left: 49%;
   top: 200%;
   height: 460px;
-  width: 26%;
+  width: 20%;
   border-radius: 10px;
   display: block;
   box-shadow: 0 14px 35px 0 rgba(9, 9, 12, 0.4);
@@ -165,6 +165,51 @@ input[type="submit"] {
 }
 
 .dropdown:checked ~ .section-dropdown {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* Register form _ internal data box style */
+
+.register-form {
+  position: relative;
+  background-color: #eef5ff;
+  height: 580px;
+  max-width: 550px;
+  padding: 25px;
+  border: 2px solid #9eb8d9;
+  border-radius: 10px;
+}
+
+/* Register form _ dropdown box style */
+
+.reg-dropdown {
+  width: 19%;
+  height: 40px;
+}
+.reg-dropdown[type="checkbox"] {
+  height: 15px;
+}
+
+.reg-section-dropdown {
+  position: absolute;
+  padding: 5px;
+  background-color: #111;
+  top: 200%;
+  height: 590px;
+  width: 24%;
+  border-radius: 10px;
+  display: block;
+  box-shadow: 0 14px 35px 0 rgba(9, 9, 12, 0.4);
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: all 200ms linear;
+}
+
+.reg-dropdown:checked ~ .reg-section-dropdown {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
