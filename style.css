@@ -20,6 +20,8 @@ main {
   top: 10px;
 }
 
+/* Background image */
+
 .body-background {
   position: absolute;
   top: 0%;
@@ -41,7 +43,7 @@ main {
   background-color: #eef5ff;
   height: 40px;
   width: 100%;
-  column-gap: 5%;
+  column-gap: 4%;
   border-radius: 20px;
 }
 
@@ -112,6 +114,11 @@ textarea {
   border: none;
   border-bottom: 1px solid black;
   margin-bottom: 20px;
+  resize: none;
+}
+
+textarea {
+  margin-top: 5px;
 }
 
 input:focus,
@@ -128,6 +135,12 @@ input[type="submit"] {
   border: 2px solid #9eb8d9;
   border-radius: 10px;
   cursor: pointer;
+}
+
+input:invalid,
+textarea:invalid,
+input:out-of-range {
+  border-right: 2px solid #a25772;
 }
 
 /* Contact Us _ dropdown box style */
@@ -175,11 +188,39 @@ input[type="submit"] {
 .register-form {
   position: relative;
   background-color: #eef5ff;
-  height: 580px;
+  height: 650px;
   max-width: 550px;
   padding: 25px;
   border: 2px solid #9eb8d9;
   border-radius: 10px;
+}
+
+.register-form p {
+  text-align: justify;
+  padding-bottom: 20px;
+  font-size: 16px;
+}
+
+.required {
+  text-decoration: underline;
+}
+
+.register-form label[for="read-only"],
+.register-form label[for="email"],
+.register-form label[for="password"],
+.register-form label[for="number"],
+.register-form label[for="about"] {
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+
+input#read-only {
+  color: #7b7880;
+}
+
+input#read-only:focus {
+  outline: none;
+  border-bottom: 1px solid #0c0c0c;
 }
 
 /* Register form _ dropdown box style */
@@ -192,13 +233,31 @@ input[type="submit"] {
   height: 15px;
 }
 
+.terms {
+  position: relative;
+  width: 90%;
+  height: 40px;
+}
+
+label[for="terms"] {
+  position: relative;
+  padding-left: 20px;
+}
+
+input#terms[type="checkbox"] {
+  position: absolute;
+  width: 5%;
+  height: 15px;
+  top: 10%;
+  opacity: 1;
+}
+
 .reg-section-dropdown {
   position: absolute;
   padding: 5px;
   background-color: #111;
   top: 200%;
-  height: 590px;
-  width: 24%;
+  height: 660px;
   border-radius: 10px;
   display: block;
   box-shadow: 0 14px 35px 0 rgba(9, 9, 12, 0.4);
@@ -217,14 +276,16 @@ input[type="submit"] {
 
 /* Arrow animation */
 
-.dropdown:checked + label .uil {
+.dropdown:checked + label .uil,
+.reg-dropdown:checked + label .uil {
   transform: rotate(180deg);
   font-size: 24px;
   margin-left: 10px;
   transition: transform 200ms linear;
 }
 
-.dropdown:not(:checked) + label .uil {
+.dropdown:not(:checked) + label .uil,
+.reg-dropdown:not(:checked) + label .uil {
   font-size: 24px;
   margin-left: 10px;
   transition: transform 200ms linear;

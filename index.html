@@ -3,8 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trying forms and user-actions</title>
+    <title>Forms and user-actions</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@iconscout/unicons@4.0.8/css/line.min.css"
+    />
   </head>
   <body>
     
@@ -16,7 +20,7 @@
       
       <div class="sec-center">
         <input class="dropdown" type="checkbox" id="dropdown" name="dropdown" />
-        <label class="for-dropdown" for="dropdown">Contact Us</label>
+        <label class="for-dropdown" for="dropdown">Contact Us <i class="uil uil-angle-down"></i></label>
         <div class="section-dropdown">
           <div class="contact-form">
             <h1>Contact Us!</h1>
@@ -30,6 +34,7 @@
                 placeholder="Tommy"
                 minlength="3"
                 maxlength="20"
+                onkeydown="return /[a-zA-Z]/i.test(event.key)"
                 required
               />
       
@@ -43,9 +48,9 @@
               />
       
               <label for="tel">Mobile Number:</label>
-              <input type="tel" name="tel" id="tel" placeholder="+370 614 74561" minlength="8" maxlength="8" pattern="[370]{3} [0-9]{3} [0-9]{5}" />
+              <input type="tel" name="tel" id="tel" placeholder="370 614 74561" minlength="13" maxlength="13" pattern="[370]{3} [0-9]{3} [0-9]{5}" />
       
-              <textarea placeholder="Your message goes here..."></textarea>
+              <textarea placeholder="Your message goes here..." rows="3"></textarea>
       
               <input type="submit" value="Send!" />
             </form>
@@ -54,7 +59,7 @@
       </div>
       <div class="reg-sec-center">
         <input class="reg-dropdown" type="checkbox" id="reg-dropdown" name="reg-dropdown" />
-        <label class="for-dropdown" for="reg-dropdown">Register Form</label>
+        <label class="for-dropdown" for="reg-dropdown">Register Form<i class="uil uil-angle-down"></i></label>
         <div class="reg-section-dropdown">
           <div class="register-form">
             <h1>Register Form</h1>
@@ -66,8 +71,7 @@
             <form method="post">
               <div class="read-only">
                 <label for="read-only"
-                  >Your unique ID that you can't change</label
-                >
+                  >Your unique ID <small>(you can't change)</small></label>
                 <input
                   id="read-only"
                   type="text"
@@ -87,17 +91,16 @@
                 />
               </div>
               <div class="password">
-                <label for="password">Password:</label><br />
+                <label for="password">Password:</label>
                 <input
                   id="password"
                   type="password"
                   name="password"
                   required
-                  required
                 />
               </div>
               <div class="age">
-                <label for="age">Age:</label><br />
+                <label for="age">Age:</label>
                 <input
                   id="age"
                   type="number"
@@ -108,11 +111,14 @@
                   required
                 />
               </div>
-  
-              <div class="text-area">
-                <textarea placeholder="Your message goes here..."></textarea>
+              <div class="tell-about">
+                <label for="about">Tell us a little about yourself <small>(optional)</small>:</label>
+                <textarea id="about" name="about" placeholder="Your message goes here..." rows="3"></textarea>
               </div>
-  
+              <div class="terms">
+                <input id="terms" type="checkbox" name="terms" value="1" required>
+                <label for="terms">I agree with the terms and conditions</label>
+            </div>
               <input type="submit" value="Register" />
             </form>
           </div>
@@ -120,71 +126,6 @@
       </div>
       
     </main>
-
-    
-    <!-- <section>
-      <div class="reg-section-dropdown">
-        <div class="contact-form">
-          <h1>Register Form</h1>
-          <p>
-            All fields are <span class="required">required</span> unless
-            marked as "optional"
-          </p>
-
-          <form method="post">
-            <div class="read-only">
-              <label for="read-only"
-                >Your unique ID that you can't change</label
-              >
-              <input
-                id="read-only"
-                type="text"
-                name="read-only"
-                value="YBX0123"
-                readonly
-              />
-            </div>
-            <div class="email">
-              <label for="email">Email:</label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="tommy@email.com"
-                required
-              />
-            </div>
-            <div class="password">
-              <label for="password">Password:</label><br />
-              <input
-                id="password"
-                type="password"
-                name="password"
-                required
-                required
-              />
-            </div>
-            <div class="age">
-              <label for="age">Age:</label><br />
-              <input
-                id="age"
-                type="number"
-                name="age"
-                min="18"
-                max="65"
-                required
-              />
-            </div>
-
-            <div class="text-area">
-              <textarea placeholder="Your message goes here..."></textarea>
-            </div>
-
-            <input type="submit" value="Register" />
-          </form>
-        </div>
-      </div>
-    </section> -->
     <div class="body-background"></div>
     </div>
   </body>
