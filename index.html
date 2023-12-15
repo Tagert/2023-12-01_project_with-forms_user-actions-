@@ -15,18 +15,30 @@
  <!-- Navbar Section -->
 
     <main class="navbar">
-      <div class="nav-link home"><a href="#home">Home</a></div>
+      <div class="home-sec-center">
+        <input class="home-dropdown" type="checkbox" id="home-dropdown" name="home-dropdown" />
+        <label class="home-dropdown" for="home-dropdown">Home<i class="uil uil-angle-down"></i></label>
+        <div class="home-section-dropdown">
+
+          <div class="home-content">
+            <h1>Welcome!</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam enim maiores repellat nobis, vel perferendis minima, odio id inventore aspernatur dolores quos ex, qui iure eos et. Repudiandae voluptatem fugit assumenda itaque vel! Laboriosam, unde ullam earum sit ratione magnam tenetur totam minima in repellendus laborum! Commodi, consectetur modi. Ab?
+            </p>
+          </div>
+        </div>
+      </div>
       <div class="nav-link about"><a href="#about">About</a></div>
       
       <div class="sec-center">
         <input class="dropdown" type="checkbox" id="dropdown" name="dropdown" />
         <label class="for-dropdown" for="dropdown">Contact Us <i class="uil uil-angle-down"></i></label>
         <div class="section-dropdown">
+          
           <div class="contact-form">
             <h1>Contact Us!</h1>
-      
             <form>
-              <label for="name">Name:</label>
+              <label for="name">Name:</label> 
               <input
                 type="text"
                 name="name"
@@ -35,39 +47,34 @@
                 minlength="3"
                 maxlength="20"
                 onkeydown="return /[a-zA-Z]/i.test(event.key)"
-                required
-              />
-      
+                required/>
               <label for="email">Email:</label>
               <input
                 type="email"
                 name="email"
                 id="email"
                 placeholder="tommy@email.com"
-                required
-              />
-      
+                required/>
               <label for="tel">Mobile Number:</label>
               <input type="tel" name="tel" id="tel" placeholder="370 614 74561" minlength="13" maxlength="13" pattern="[370]{3} [0-9]{3} [0-9]{5}" />
-      
               <textarea placeholder="Your message goes here..." rows="3"></textarea>
-      
               <input type="submit" value="Send!" />
             </form>
           </div>
         </div>
       </div>
+
       <div class="reg-sec-center">
         <input class="reg-dropdown" type="checkbox" id="reg-dropdown" name="reg-dropdown" />
-        <label class="for-dropdown" for="reg-dropdown">Register Form<i class="uil uil-angle-down"></i></label>
+        <label class="reg-dropdown" for="reg-dropdown">Register Form<i class="uil uil-angle-down"></i></label>
         <div class="reg-section-dropdown">
+          
           <div class="register-form">
             <h1>Register Form</h1>
             <p>
               All fields are <span class="required">required</span> unless
               marked as "optional"
             </p>
-  
             <form method="post">
               <div class="read-only">
                 <label for="read-only"
@@ -77,8 +84,7 @@
                   type="text"
                   name="read-only"
                   value="YBX0123"
-                  readonly
-                />
+                  readonly />
               </div>
               <div class="email">
                 <label for="email">Email:</label>
@@ -87,8 +93,7 @@
                   name="email"
                   id="email"
                   placeholder="tommy@email.com"
-                  required
-                />
+                  required/>
               </div>
               <div class="password">
                 <label for="password">Password:</label>
@@ -96,8 +101,7 @@
                   id="password"
                   type="password"
                   name="password"
-                  required
-                />
+                  required/>
               </div>
               <div class="age">
                 <label for="age">Age:</label>
@@ -108,8 +112,7 @@
                   min="18"
                   max="65"
                   placeholder="18"
-                  required
-                />
+                  required/>
               </div>
               <div class="tell-about">
                 <label for="about">Tell us a little about yourself <small>(optional)</small>:</label>
@@ -124,7 +127,6 @@
           </div>
         </div>
       </div>
-      
     </main>
     <div class="body-background"></div>
     </div>
